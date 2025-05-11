@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MONSTERWARE | Kontak Kami</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #00ffae;
+      --dark: #0a0a0a;
+      --light: #f5f5f5;
+      --gray: #777;
+      --light-dark: #1a1a1a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #000;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 60px;
+      margin-right: 8px;
+    }
+
+    .brand {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--primary);
+    }
+
+    .cart-icon-container {
+      margin-left: 1.5rem;
+      position: relative;
+      padding-right: 1rem;
+    }
+
+    .cart-icon {
+      font-size: 1.5rem;
+      color: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .cart-icon:hover {
+      color: var(--primary);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: 0;
+      background: var(--primary);
+      color: #000;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .main-content {
+      margin-top: 80px;
+      min-height: calc(100vh - 160px);
+    }
+
+    .contact-section {
+      padding: 4rem 2rem;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-container h2 {
+      color: var(--primary);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact-description {
+      text-align: center;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--light-dark);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .info-item {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    .info-item i {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .info-item h3 {
+      color: var(--primary);
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .info-item p {
+      margin: 0.3rem 0;
+      color: #ccc;
+    }
+
+    .social-media h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      color: var(--light);
+      background: #333;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .contact-form h3 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: var(--light);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: var(--primary);
+      color: var(--dark);
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #00e29f;
+    }
+
+    .map-container {
+      margin-top: 3rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 174, 0.3);
+    }
+    
+    .map-container h2 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .map-frame {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+    footer {
+      background: #000;
+      color: #999;
+      padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .footer-section h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .footer-section p, .footer-section li {
+      margin: 0.5rem 0;
+      color: #777;
+    }
+
+    .footer-section a {
+      color: #777;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: var(--primary);
+    }
+
+    .footer-section i {
+      margin-right: 0.5rem;
+      color: var(--primary);
+      width: 20px;
+      text-align: center;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #222;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 0.8rem 1rem;
+      }
+
+      nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="f:\web monsterware\Logo MONSTERWARE.png" alt="Logo">
+    <span class="brand">MONSTERWARE</span>
+  </div>
+  <nav>
+    <a href="f:\web monsterware\WEBmonsterware.html">Beranda</a>
+    <a href="f:\web monsterware\WEBmonsterware.html" >Produk</a>
+    <a href="f:\web monsterware\WEBmonsterware.html">Tentang</a>
+    <div class="cart-icon-container">
+    </div>
+  </nav>
+</header>
+
+<div class="main-content">
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Hubungi Kami</h2>
+      <p class="contact-description">Punya pertanyaan atau butuh bantuan? kami siap membantu Anda.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Alamat</h3>
+              <p>Jl. Gaming No. 123, Jakarta Selatan<br>Indonesia 12345</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Telepon/WhatsApp</h3>
+              <p><a href="https://wa.me/6285230763144" style="color: #00ffae; text-decoration: none;">0852-3076-3144</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p><a href="https://mail.google.com/mail/u/0/?fs=1&to=mohammadhanani76@gmail.com&tf=cm" style="color: #00ffae; text-decoration: none;">mohammadhanani76@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="social-media">
+            <h3>Media Sosial</h3>
+            <div class="social-icons">
+              <a href="https://instagram.com/mhn10_______" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://facebook.com/mohammadhanani" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://youtube.com/@mohammadhanani3555" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://wa.me/6285230763144" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+  <h3>Kirim Pesan</h3>
+  <form onsubmit="return sendToWhatsApp();">
+    <div class="form-group">
+      <label for="name">Nama Lengkap*</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subjek</label>
+      <input type="text" id="subject" name="subject">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Pesan*</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Kirim Pesan</button>
+  </form>
+</div>
+
+      </div>
+
+      <div class="map-container">
+        <h2>Lokasi Kami</h2>
+        <iframe 
+          class="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613506864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e839560a85ab!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1623394257726!5m2!1sen!2sid" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Tentang MONSTERWARE</h4>
+      <p>MONSTERWARE adalah destinasi utama untuk semua kebutuhan gaming gear dan perangkat komputer high-end.</p>
+    </div>
+    <div class="footer-section">
+      <h4>Link Cepat</h4>
+      <ul>
+        <li><a href="WEBmonsterware.html">Beranda</a></li>
+        <li><a href="WEBmonsterware.html">Produk</a></li>
+        <li><a href="WEBmonsterware.html">Tentang Kami</a></li>
+        <li><a href="contack.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Hubungi Kami</h4>
+      <p><i class="fas fa-phone-alt"></i> <a href="https://wa.me/6285230763144" style="color: #777; text-decoration: none;">0852-3076-3144</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/u/0/?fs=1&to=mohammadhanani76@gmail.com&tf=cm" style="color: #777; text-decoration: none;">mohammadhanani76@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 MONSTERWARE. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+    // Fungsi untuk mengirim email
+    function sendEmail(name, email, subject, message) {
+      const mailtoLink = `mailto:mohammadhanani76@gmail.com?subject=${encodeURIComponent(subject || 'Pesan dari Website')}&body=${encodeURIComponent(
+        `Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`
+      )}`;
+      
+      window.location.href = mailtoLink;
+    }
+
+    // Handle form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Simpan data di localStorage (untuk backup)
+        const formData = {
+          name,
+          email,
+          subject,
+          message,
+          timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('lastContactForm', JSON.stringify(formData));
+        
+        // Kirim email
+        sendEmail(name, email, subject, message);
+        
+        // Tampilkan notifikasi
+        alert(`Terima kasih ${name}! Pesan Anda akan dikirim ke email kami. Silakan lanjutkan dengan klien email Anda.`);
+        
+        // Reset form (opsional)
+        contactForm.reset();
+      });
+    }
+    function generateMailto() {
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const subject = encodeURIComponent(document.getElementById('subject').value || 'Pesan dari Website');
+    const message = encodeURIComponent(document.getElementById('message').value);
+    
+    return `mailto:mohammadhanani76@gmail.com?subject=${subject}&body=Nama:%20${name}%0AEmail:%20${email}%0A%0APesan:%0A${message}`;
+  }
+
+    function updateCartCount(count = 0) {
+      const cartCount = document.getElementById('cart-count');
+      cartCount.textContent = count;
+      cartCount.style.display = count > 0 ? 'flex' : 'none';
+    }
+    updateCartCount(); // Default 0
+  });
+
+function sendToWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim() || "Tanpa Subjek";
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("Harap isi semua kolom yang wajib diisi.");
+    return false;
+  }
+
+  const fullMessage = `Halo, saya ${name} (${email})%0ASubjek: ${subject}%0A%0A${message}`;
+  const phoneNumber = "6285230763144";
+  const waUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+
+  window.open(waUrl, "_blank");
+  return false;
+}
+
+</script>
+
+</body>
+</html>

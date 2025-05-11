@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONSTERWARE | Selamat Datang</title>
+  <link rel="icon" type="image/png" href="F:\web monsterware\Logo MONSTERWARE.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #00ffc3;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #00ffc3;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #cccccc;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: transparent;
+      border: 2px solid #00ffc3;
+      color: #00ffc3;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ffc3;
+      color: black;
+    }
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(#00ffc344 1px, transparent 1px);
+      background-size: 20px 20px;
+      animation: move 20s linear infinite;
+    }
+
+    @keyframes move {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="particles"></div>
+
+  <img src="f:\web monsterware\Logo MONSTERWARE.png" alt="Logo MONSTERWARE" class="logo">
+  <h1>SELAMAT DATANG</h1>
+  <p>Optimalkan pengalaman digitalmu bersama MONSTERWARE</p>
+  <button onclick="window.location.href='hal register.html'">Klik Untuk Melanjutkan</button>
+</body>
+</html>
